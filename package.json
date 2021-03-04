@@ -1,0 +1,47 @@
+{
+  "name": "api-tests",
+  "version": "1.0.0",
+  "description": "Projeto de Mentoria em Testes de API testando o https://github.com/PauloGoncalvesBH/ServeRest/",
+  "author": "Samanta Cicilia",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samycici/api-tests.git"
+  },
+  "keywords": [
+    "testing",
+    "rest",
+    "api"
+  ],
+  "scripts": {
+    "test": "jest",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
+  },
+  "devDependencies": {
+    "jest": "26.4.2",
+    "standard": "^14.3.3",
+    "supertest": "^4.0.2",
+    "faker": "5.1.0"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "standard": {
+    "globals": [
+      "beforeEach",
+      "beforeAll",
+      "afterAll",
+      "afterEach",
+      "describe",
+      "it",
+      "request",
+      "expect"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npm run lint:fix"
+    ]
+  }
+}
